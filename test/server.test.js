@@ -7,7 +7,7 @@ describe('POST /api/fileanalyse', () => {
     const responseObj = {
       name: 'libreWriterFile.odt',
       type: 'application/vnd.oasis.opendocument.text',
-      size: 8345
+      size: 8345,
     };
 
     request(app)
@@ -17,7 +17,7 @@ describe('POST /api/fileanalyse', () => {
       .expect((res) => {
         expect(res.body).toEqual(responseObj);
       })
-      .end(done)
+      .end(done);
   });
 });
 
@@ -30,6 +30,6 @@ describe('GET /', () => {
         expect(res.header.location).toBe('/fileForm.html');
         expect(res.text).toBe('Found. Redirecting to /fileForm.html');
       })
-      .end(done)
-  })
+      .end(done);
+  });
 });
