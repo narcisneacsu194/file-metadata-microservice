@@ -21,3 +21,5 @@ app.post('/api/fileanalyse', upload.single('newfile'), (req, res) => {
 app.listen(port, () => {
   console.log(`Server started using port ${port}.`);
 });
+
+module.exports = { app };
